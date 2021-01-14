@@ -1,0 +1,22 @@
+
+{% extends 'index.html' %}
+{% load static%}
+
+{% block title %} {{detailsPost.title}} {% endblock %} 
+{% block presentacion %}  {% endblock %} 
+{% block partials %}  {% endblock %} 
+
+{% block title-heading %} 
+<h2>{{detailsPost.title}} </h2>
+<p>
+  {{detailsPost.description}}
+</p>  {% endblock %} 
+
+{% block image %} {{ detailsPost.image}}{% endblock %} 
+
+{% block content %}
+<div class="container" style="padding-left: 10%;">
+  {{detailsPost.content| safe }} 
+</div>
+
+{% endblock %}
